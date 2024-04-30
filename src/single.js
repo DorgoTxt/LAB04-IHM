@@ -1,7 +1,18 @@
+import Importadas from  './data/portada';
+ 
 const Single = () => {
-    return (<>
-        <h1>Pagina simple</h1>
-    </>);
+    console.log(Importadas);
+    const currentRoute = window.location.pathname;
+    const portada = Importadas.find((item) => item.slug === currentRoute.replace('/detalle/', ''));
+    return(
+        <>
+            <h1 >{portada.name}</h1>
+            <br></br>
+            <img src={portada.url} alt={portada.name} />
+
+        </>
+    )
+
 }
 
 export default Single;

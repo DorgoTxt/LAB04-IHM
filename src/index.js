@@ -9,8 +9,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Single from "./single";
-import Basic from "./basic";
-
+import Basic from "./layoult/basic";
+import Main from "./main";
+import Aside from "./aside";
 setTimeout(() => {
   feather.replace();
 }, 1000);
@@ -19,23 +20,27 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Basic />,
+    children: [
+      {
+        path: '',
+        element: <>
+          <div className="col-md-8">
+            <Main></Main>
+          </div>
+          <div className="col-md-4">
+            <Aside></Aside>
+          </div>
+        </>
+      },
+      {
+        path: "detalle/:slug",
+        element: <Single />,
+      },
+    ],
   },
-  {
-    path: "detalle",
-    element: <Single />,
-  },
-
 ]);
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-
-);
 
 const root = createRoot(document.getElementById("root"));
 root.render(
-
   <RouterProvider router={router} />
 );

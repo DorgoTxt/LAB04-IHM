@@ -1,32 +1,39 @@
 import Carousel from 'react-bootstrap/Carousel';
-const Main = (main) => {
-    return <main>
-        <h2>COTIZA TU PC YA!!!</h2>
-        <p>En esta sección podrás cotizar tu PC, seleccionando los componentes que desees.</p>
-        <Carousel>
-            <Carousel.Item>
-                <img src='https://e.rpp-noticias.io/xlarge/2023/03/28/240824_1407903.jpg' alt='First slide' className='img-fluid' />
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img src='https://f.rpp-noticias.io/2023/03/28/1407901103510-1322132jpg.jpg' alt='Second slide' className='img-fluid' />
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img src='https://f.rpp-noticias.io/2023/03/28/1407902364236-1385461jpg.jpg' alt='Third slide' className='img-fluid' />
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-        </Carousel>
-    </main>;
+import { useNavigate } from "react-router-dom";
+import Portada from './data/portada';
+
+const feather = require("feather-icons");
+
+setTimeout(() => {
+    feather.replace();
+}, 1000);
+
+const Main = () => {
+    const navigate = useNavigate();
+
+    const handleClick = (slug) => {
+        navigate("/detalle/" + slug);
+    }
+    return (
+        <main>
+            <h2>COTIZA TU PC YA!!!</h2>
+            <p>En esta sección podrás cotizar tu PC, seleccionando los componentes que desees.</p>
+            <Carousel>
+                {
+                    Portada.map(it => (
+                        <Carousel.Item onClick={(e) => { e.preventDefault(); handleClick(it.slug) }}>
+                            <img className="w-100 dark-image" src={it.url} alt={it.slug} />
+                            <Carousel.Caption>
+                                <h3>{it.slug}</h3>
+                                <p>{it.content}</p>
+                                <button className="btn btn-primary">Ver detalle</button>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    ))
+                }
+            </Carousel>
+        </main>
+    );
 }
 
 export default Main;
