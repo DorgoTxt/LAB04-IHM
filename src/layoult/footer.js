@@ -1,8 +1,8 @@
 import React from 'react';
-
+import styles from "../styles.css";
 const Footer = () => {
     return (
-        <footer className="position-relative w-100 bg-primary text-white py-4 mt-3">
+        <footer className="position-relative w-100 text-white py-4 color-primario">
             <div className="container">
                 <nav className="row">
                     {/* Logo */}

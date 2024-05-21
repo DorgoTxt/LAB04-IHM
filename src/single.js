@@ -9,7 +9,7 @@ const Single = () => {
             <h1 >{portada.name}</h1>
             <br></br>
             <img src={portada.url} alt={portada.name} />
-
+            <p className='text-black text-center'>{portada.descripcion} </p>
         </>
     )
 

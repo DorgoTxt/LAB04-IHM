@@ -12,12 +12,14 @@ import Single from "./single";
 import Basic from "./layoult/basic";
 import Main from "./main";
 import Aside from "./aside";
+import { Row } from "react-bootstrap";
 setTimeout(() => {
   feather.replace();
 }, 1000);
 
 const router = createBrowserRouter([
   {
+
     path: "/",
     element: <Basic />,
     children: [
