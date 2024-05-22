@@ -36,7 +36,9 @@ Cada color cumple una función específica para mejorar la experiencia del usuar
 - **Main**: El azul secundario `#2A629A` proporciona una base sólida y equilibrada en nuestra interfaz.
 - **Footer**: El amarillo terciario `#FFDA78` se utiliza para elementos que requieren una acción inmediata o para notificar al usuario de algo importante.
 
-## Authors
+## Autor
 - [@DiegoSanchezC.](https://github.com/DorgoTxt)
 
-<img style="width: 740px; height: auto;" src="https://media1.tenor.com/m/ifYvdWOFllcAAAAC/gustavo-cerati.gif">
+<p align="center">
+  <img style="width: 740px; height: auto;" src="https://media1.tenor.com/m/ifYvdWOFllcAAAAC/gustavo-cerati.gif">
+</p>
