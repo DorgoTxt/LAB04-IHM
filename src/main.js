@@ -40,7 +40,7 @@ const Main = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             goToNextSlide();
-        }, 1800); // Cambia a la siguiente imagen cada 1 segundos
+        }, 2500); // Cambia a la siguiente imagen cada 1 segundos
 
         // Limpia el temporizador cuando el componente se desmonta
         return () => clearInterval(timer);

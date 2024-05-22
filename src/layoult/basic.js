@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import { Outlet } from "react-router-dom";
-import styles from "../styles.css";
+
 
 const Basic = () => {
     return (
