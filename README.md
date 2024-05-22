@@ -25,9 +25,6 @@ Bienvenido a la teoría de colores de **Cotiza tu PC Ya!!** Aquí exploramos la 
 - **Amarillo Terciario**: `#FFDA78`
   - **Descripción**: El amarillo terciario aporta un toque de energía y vitalidad a la paleta, creando contraste y dinamismo.
   - **Uso**: Ideal para resaltar elementos interactivos como botones de llamada a la acción, enlaces y notificaciones importantes.
-
-  
-  
   
   ![Color Terciario - Amarillo](https://via.placeholder.com/50/FFDA78/FFFFFF?text=%20)
 
